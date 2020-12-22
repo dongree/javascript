@@ -4,7 +4,7 @@
 // felxable한 단점 보완
 'use strict'; 
 
-// 2. Variable
+// 2. Variable, rw(read/write)
 // let (added in ES6)
 
 let globalName = 'global name'
@@ -29,17 +29,25 @@ console.log(globalName);
 console.log(age);
 
 
-// 3. Constants
-// favor immutable data type always for a few reasons:
-//  - security
-//  - thread safety
-//  - reduce human mistakes
+// 3. Constant, r(read only)
+// use const whenever possible
+// only use let if variable needs to change
 // 한 번 할당하면 값이 변하지 않는 것
 const daysInWeek = 7;
 const maxNumber = 5;
 
 
+// Note!
+// Immutable data types: premitive types, frozen objects
+// Mutable data thpes: all objects by default are mutable in jS
+// favor immutable data type always for a few reasons:
+//  - security
+//  - thread safety
+//  - reduce human mistakes
+
+
 // 4. Variable types
+// primitve type - value로 값이 저장됨 | object type - object를 가리키는 reference가 메모리에 저장이 됨
 const count = 17 // integer
 const size = 17.1 // decimal number
 console.log(`value: ${count}, type: ${typeof count}`);
